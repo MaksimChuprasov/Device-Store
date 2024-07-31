@@ -1,8 +1,12 @@
+import Layout from "../components/Layout";
+
 function Catalog() {
     return ( 
-        <div>
-            Catalog
-        </div>
+        <Layout>
+            <div>
+                Catalog
+            </div>
+        </Layout>
      );
 }
 
