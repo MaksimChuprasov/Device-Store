@@ -35,7 +35,6 @@ function Catalog() {
 
     return (
         <Layout>
-            <main className="py-8 lg:pb-16">
                 <div className="container">
                     <ul className="breadcrumbs flex flex-wrap gap-y-1 gap-x-4 mb-6">
                         <li><Link to={"/"} className="text-gray hover:text-darkblue text-xs">Home</Link></li>
@@ -138,7 +137,7 @@ function Catalog() {
                                 <div
                                     className="products grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-4 gap-4">
                                     {currentItems.map(item => (
-                                        <ProductCard key={item.id} src={"https://lara2.fcqdaqp.online/storage/images/" + item.thumbnail} title={item.title} price={item.price} />
+                                        <ProductCard key={item.id} src={"https://lara2.fcqdaqp.online/storage/images/" + item.thumbnail} properties={item.json_properties} text={item.text} title={item.title} price={item.price}/>
                                     ))}
                                 </div>
                                 {/* @endif */}
@@ -155,7 +154,6 @@ function Catalog() {
                         </div>
                     </section>
                 </div>
-            </main>
         </Layout>
     );
 }

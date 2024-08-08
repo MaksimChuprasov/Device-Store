@@ -114,7 +114,7 @@ function Header() {
                                         </div>
                                     </Link>
                                 </div>
-                                <a href="{{ route('login') }}" className="profile hidden xs:flex items-center">
+                                <Link to={"/login"} className="profile hidden xs:flex items-center">
                                     <svg className="profile-icon w-8 h-8 text-darkblue" xmlns="http://www.w3.org/2000/svg"
                                         aria-hidden="true" role="img" width="1em"
                                         height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32">
@@ -124,7 +124,7 @@ function Header() {
                                             fill="currentColor" />
                                     </svg>
                                     <span className="profile-text relative ml-2 text-black text-xxs md:text-xs font-bold">Login</span>
-                                </a>
+                                </Link>
                             </div>
                         </div>
 

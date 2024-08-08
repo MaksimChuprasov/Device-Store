@@ -1,21 +1,24 @@
-function ProductCard({src, title, price}) {
+import { Link } from "react-router-dom";
+
+function ProductCard({src, title, price, text, properties}) {
 
     const priceStr = price.toString();
 
     const formattedPrice = priceStr.slice(0, -2) + ',' + priceStr.slice(-2);
+    console.log(properties)
 
     return ( 
         /* Product card */
         <div className="product-card flex flex-col rounded-lg bg-gray">
-            <a href="{{ route('product', $product) }}" className="product-card-photo overflow-hidden h-[320px] rounded-lg">
+            <Link to={`/catalog/product/${title}`} state={{ title, src, formattedPrice, text, properties }} className="product-card-photo overflow-hidden h-[320px] rounded-lg">
                 <img src={src} className="object-cover w-full h-full p-2 pb-0"
                     alt={title} />
-            </a>
+            </Link>
             <div className="grow flex flex-col py-8 px-6">
                 <h3 className="text-sm lg:text-md font-black">
-                    <a href="{{ route('product', $product) }}" className="inline-block text-white hover:text-darkblue">
+                    <Link to={`/catalog/product/${title}`} state={{ title, src, formattedPrice, text, properties }} className="inline-block text-white hover:text-darkblue">
                         {/* {{ $product-> title}} */} {title}
-                    </a>
+                    </Link>
                     <div className="text-body text-xxs sm:text-xs font-thin">
                         {/* {{ isset($product-> brand) ? $product->brand->title : '- no brand -' }} */}Brand
                     </div>
@@ -27,7 +30,7 @@ function ProductCard({src, title, price}) {
                     {/* <div hidden>{{ $product-> price}} </div>  {{-- for test --}} */}
 
                     <div className="flex items-center gap-2">
-                        <a href="{{ route('product', $product) }}" className="w-[56px] !h-[56px] !px-0 btn btn-blue">
+                        <a href="#" className="w-[56px] !h-[56px] !px-0 btn btn-blue">
                             <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="currentColor" viewBox="0 0 52 52">
                                 <path
                                     d="M39.385 38.663a6.047 6.047 0 1 0 6.041 6.053v-.006a6.053 6.053 0 0 0-6.041-6.047ZM50.11 9.706a2.329 2.329 0 0 0-.439-.042H12.852l-.583-3.902a5.248 5.248 0 0 0-5.196-4.519h-4.74a2.332 2.332 0 1 0 0 4.665h4.746a.583.583 0 0 1 .583.513l3.592 24.62a6.45 6.45 0 0 0 6.35 5.447H41.87a6.414 6.414 0 0 0 6.292-5.126l3.796-18.923a2.333 2.333 0 0 0-1.847-2.733ZM24.571 44.45a6.047 6.047 0 0 0-6.062-5.782 6.047 6.047 0 0 0 .14 12.089h.146a6.047 6.047 0 0 0 5.776-6.306Z" />
