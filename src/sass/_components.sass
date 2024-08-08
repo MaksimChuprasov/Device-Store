@@ -99,11 +99,19 @@ input[type=number]
 		outline: none
 
 // Select
+
+.no-select 
+	-webkit-user-select: none 
+	-moz-user-select: none    
+	-ms-user-select: none    
+	user-select: none        
+
+
 .form-select
 	cursor: pointer
 	appearance: none
 	padding-right: 32px
-	background-image: url('../images/icons/drop-down-double.svg')
+	background-image: url('../img/drop-down-double.svg')
 	background-repeat: no-repeat
 	background-position: right 8px center
 	background-size: 20px
