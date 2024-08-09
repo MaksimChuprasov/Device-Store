@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
 
-function ProductCard({src, title, price, text, properties}) {
+function ProductCard({ src, title, price, text, properties }) {
 
     const priceStr = price.toString();
 
     const formattedPrice = priceStr.slice(0, -2) + ',' + priceStr.slice(-2);
     console.log(properties)
 
-    return ( 
+    return (
         /* Product card */
         <div className="product-card flex flex-col rounded-lg bg-gray">
             <Link to={`/catalog/product/${title}`} state={{ title, src, formattedPrice, text, properties }} className="product-card-photo overflow-hidden h-[320px] rounded-lg">
@@ -17,18 +17,16 @@ function ProductCard({src, title, price, text, properties}) {
             <div className="grow flex flex-col py-8 px-6">
                 <h3 className="text-sm lg:text-md font-black">
                     <Link to={`/catalog/product/${title}`} state={{ title, src, formattedPrice, text, properties }} className="inline-block text-white hover:text-darkblue">
-                        {/* {{ $product-> title}} */} {title}
+                        {title}
                     </Link>
                     <div className="text-body text-xxs sm:text-xs font-thin">
-                        {/* {{ isset($product-> brand) ? $product->brand->title : '- no brand -' }} */}Brand
+                        Brand
                     </div>
                 </h3>
                 <div className="mt-auto pt-6 flex items-center justify-betwen">
                     <div className="flex text-sm font-semibold w-full">
-                        {/* {{ $product-> priceFormatted()}} */} ${formattedPrice}
+                        ${formattedPrice}
                     </div>
-                    {/* <div hidden>{{ $product-> price}} </div>  {{-- for test --}} */}
-
                     <div className="flex items-center gap-2">
                         <a href="#" className="w-[56px] !h-[56px] !px-0 btn btn-blue">
                             <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="currentColor" viewBox="0 0 52 52">
@@ -41,16 +39,12 @@ function ProductCard({src, title, price, text, properties}) {
                                 <path
                                     d="M26 48.486c-.263 0-.526-.067-.762-.203-.255-.148-6.336-3.679-12.504-8.998-3.656-3.153-6.574-6.28-8.673-9.295C1.344 26.09-.022 22.338 0 18.84c.025-4.072 1.483-7.901 4.106-10.782 2.667-2.93 6.226-4.544 10.021-4.544 4.865 0 9.312 2.725 11.872 7.042 2.56-4.317 7.007-7.042 11.872-7.042 3.586 0 7.007 1.456 9.634 4.1 2.883 2.9 4.52 7 4.494 11.245-.022 3.493-1.414 7.24-4.137 11.134-2.105 3.013-5.02 6.14-8.66 9.291-6.146 5.32-12.183 8.85-12.437 8.997a1.524 1.524 0 0 1-.766.206ZM14.128 6.56c-2.927 0-5.686 1.26-7.768 3.548-2.115 2.324-3.292 5.431-3.313 8.75-.042 6.606 6.308 13.483 11.642 18.09 4.712 4.068 9.49 7.123 11.308 8.236 1.808-1.115 6.554-4.168 11.246-8.235 5.319-4.61 11.668-11.493 11.71-18.11.022-3.44-1.294-6.749-3.608-9.079-2.05-2.063-4.705-3.2-7.473-3.2-4.658 0-8.847 3.276-10.422 8.152a1.523 1.523 0 0 1-2.9 0C22.976 9.836 18.787 6.56 14.129 6.56Z" />
                             </svg>
-                            {/* {{-- < svg className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 52 52">
-                            <path
-                                d="M26 48.486c-.263 0-.526-.067-.762-.203-.255-.148-6.336-3.679-12.504-8.998-3.656-3.153-6.574-6.28-8.673-9.295C1.344 26.09-.022 22.338 0 18.84c.025-4.072 1.483-7.901 4.106-10.782 2.667-2.93 6.226-4.544 10.021-4.544 4.865 0 9.312 2.725 11.872 7.042 2.56-4.317 7.007-7.042 11.872-7.042 3.586 0 7.007 1.456 9.634 4.1 2.883 2.9 4.52 7 4.494 11.245-.022 3.493-1.414 7.24-4.137 11.135-2.105 3.012-5.02 6.138-8.66 9.29-6.146 5.32-12.183 8.85-12.437 8.997a1.524 1.524 0 0 1-.766.206Z" />
-                        </> --}} */}
-                    </a>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-</div >/* /.product-card */
-     );
+        </div >/* /.product-card */
+    );
 }
 
 export default ProductCard;

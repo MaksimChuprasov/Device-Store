@@ -16,7 +16,7 @@ function ProductPage() {
     };
 
     const handlePlus = () => {
-        setQuantity(prevQuantity => prevQuantity + 1); 
+        setQuantity(prevQuantity => prevQuantity + 1);
     };
 
     const handleMinus = () => {
@@ -32,7 +32,7 @@ function ProductPage() {
                     <ul className="breadcrumbs flex flex-wrap gap-y-1 gap-x-4 mb-6">
                         <li><Link to={"/"} className="text-gray hover:text-darkblue text-xs">Home</Link></li>
                         <li><Link to={"/catalog"} className="text-gray hover:text-darkblue text-xs">Catalog</Link></li>
-                        <li><span className="text-gray text-xs">{/* {{ $product-> title}} */}{title}</span></li>
+                        <li><span className="text-gray text-xs">{title}</span></li>
                     </ul>
 
                     {/* Main product */}
@@ -47,7 +47,7 @@ function ProductPage() {
 
                         <div className="basis-full lg:basis-3/5 xl:basis-2/4">
                             <div className="grow flex flex-col lg:py-8">
-                                <h1 className="text-lg md:text-xl xl:text-[32px] font-black text-darkblue">{/* {{ $product-> title}} */}{title}</h1>
+                                <h1 className="text-lg md:text-xl xl:text-[32px] font-black text-darkblue">{title}</h1>
                                 <ul className="flex items-center gap-2 mt-4">
                                     <li className="text-[#FFC107]">
                                         <svg className="w-4 md:w-6 h-4 md:h-6" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
@@ -86,44 +86,30 @@ function ProductPage() {
                                     </li>
                                 </ul>
                                 <div className="flex items-baseline gap-4 mt-4">
-                                    <div className="text-dark text-lg md:text-xl font-black">{/* {{ $product-> priceFormatted()}} */}${formattedPrice}</div>
+                                    <div className="text-dark text-lg md:text-xl font-black">${formattedPrice}</div>
                                 </div>
                                 <ul className="sm:max-w-[360px] space-y-2 mt-8">
-                                    {/* @foreach ($product->properties as $property) */}
                                     {entries.map(([key, value]) => (
                                         <li key={key} className="flex justify-between text-gray">
                                             <strong className="text-dark">{key}:</strong> {value}
                                         </li>
                                     ))}
-
-                                    {/* @endforeach  */}
                                 </ul>
 
                                 {/* Add to cart  */}
                                 <form action="{{ route('cart.add', $product) }}" method="POST" className="space-y-8 mt-8">
-                                    {/* @csrf */}
                                     <div className="grid grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 gap-4">
-                                        {/* @foreach ($options as $option => $values) */}
                                         <div className="flex flex-col gap-2">
-                                            <label /* for="option-{{ $loop->index }}" */
-                                                className="cursor-pointer text-dark text-xxs font-medium">
-                                                {/* {{ $option }} */}
+                                            <label className="cursor-pointer text-dark text-xxs font-medium">
                                             </label>
                                             <select name="options[]" id="option-{{ $loop->index }}"
                                                 className="form-select w-full h-12 px-4 rounded-lg border border-solid border-black bg-gray/5 text-dark text-xs shadow-transparent outline-0 transition">
-
-                                                {/* @foreach ($values as $value) */}
                                                 <option value="{{ $value->id }}" className="text-dark">
-                                                    {/* {{ $value-> title}} */}value
+                                                    value
                                                 </option>
-                                                
-                                                {/*  @endforeach */}
-
                                             </select>
                                         </div>
-                                        {/* @endforeach */}
                                     </div>
-
                                     <div className="flex flex-wrap items-center gap-3">
                                         <div className="flex items-stretch h-[54px] lg:h-[72px] gap-1">
                                             <button type="button" id="minus" onClick={handleMinus}
@@ -143,20 +129,16 @@ function ProductPage() {
                                             </svg>
                                         </a>
                                     </div>
-
                                 </form>
-
                             </div>
                         </div>
-
                     </section>
 
                     {/* Description */}
                     <section className="mt-12 xl:mt-8 pt-6 lg:pt-12 border-t border-white/10">
                         <h2 className="mb-8 text-lg lg:text-[32px] font-black text-dark">Description</h2>
                         <article className="text-xs md:text-sm text-dark">
-                            {/* {!!$product -> text!!} */}
-                            {/* {{-- {{ $product-> text}} --}} */}{text}
+                            {text}
                         </article>
                     </section>
 
@@ -164,12 +146,9 @@ function ProductPage() {
                     <section className="mt-10">
                         <h2 className="mb-12 text-lg lg:text-[32px] font-black text-dark">Viewed products</h2>
                         {/* Products list */}
-                        <div
-                            className="products grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
-                            {/* @each('product.shared.product', $watchedProducts, 'product') */}
+                        <div className="products grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
                         </div>
                     </section>
-
                 </div>
             </main>
         </Layout>

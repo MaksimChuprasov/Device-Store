@@ -15,8 +15,6 @@ function Cart() {
                     <section className="mb-24">
                          {/* Section heading */}
                         <h1 className="mb-8 text-lg lg:text-[42px] font-black text-darkblue">Shopping cart</h1>
-
-                {/* @if ($cartItems->isEmpty()) */}
                         <div className="py-3 px-6 rounded-lg bg-darkblue text-white">Cart is empty</div>
                         {/* @else 
                           Adaptive table 

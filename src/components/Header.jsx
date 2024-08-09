@@ -109,7 +109,7 @@ function Header() {
                                                 2 pcs.
                                             </span>
                                             <span className="text-black text-xxs 2xl:text-xs font-bold !leading-none">
-                                                $2400 {/* {{ cart()->total() }} */}
+                                                $2400
                                             </span>
                                         </div>
                                     </Link>

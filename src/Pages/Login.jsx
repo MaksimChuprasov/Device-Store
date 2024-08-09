@@ -10,7 +10,7 @@ function Profile() {
                 <form className="space-y-6 mb-4" action="{{ $action }}" method="{{ $method }}">
                     <input className="w-full h-14 px-4 rounded-lg border border-black bg-white/20 text-black outline-none transition placeholder:text-darkblue text-xxs md:text-xs font-semibold" type="email" name="email" placeholder="E-mail" required/>
 
-                    <input className="w-full h-14 px-4 rounded-lg border border-black bg-white/20 text-black outline-none transition placeholder:text-darkblue text-xxs md:text-xs font-semibold" type="password" name="password" placeholder="Password" required /* :isError="$errors->has('password')" */ />
+                    <input className="w-full h-14 px-4 rounded-lg border border-black bg-white/20 text-black outline-none transition placeholder:text-darkblue text-xxs md:text-xs font-semibold" type="password" name="password" placeholder="Password" required />
 
                     <button className="w-full h-8 btn btn-blue">Login</button>
                 </form>

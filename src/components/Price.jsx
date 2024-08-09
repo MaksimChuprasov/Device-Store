@@ -1,7 +1,7 @@
 function Price() {
     return (
         <div className="pb-4">
-            <h5 className="mb-4 text-sm 2xl:text-md font-bold">{/* {{ $filter-> title()}} */}Price</h5>
+            <h5 className="mb-4 text-sm 2xl:text-md font-bold">Price</h5>
 
             <div className="flex items-center justify-between gap-3 mb-2">
                 <span className="text-gray text-xxs font-medium">From, $</span>
@@ -12,7 +12,7 @@ function Price() {
                 <input
                     id="{{ $filter->id('from') }}"
                     name="{{ $filter->name('from') }}"
-                    /* value="{{ $filter->requestValue('from', 0) }}" */
+
                     type="number"
                     className="w-full h-12 px-4 rounded-lg border border-black bg-gray/5 text-dark text-xs shadow-transparent outline-0 transition"
                     value="0" placeholder="От"
@@ -22,7 +22,6 @@ function Price() {
                     id="{{ $filter->id('to') }}"
                     name="{{ $filter->name('to') }}"
                     type="number"
-                    /* value="{{ $filter->requestValue('to', 100000) }}" */
                     className="w-full h-12 px-4 rounded-lg border border-black bg-gray/5 text-dark text-xs shadow-transparent outline-0 transition"
                     value="100000" placeholder="До"
                 />
