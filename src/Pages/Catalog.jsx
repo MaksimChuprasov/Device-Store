@@ -66,7 +66,7 @@ function Catalog() {
                             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
                                 <div className="flex items-center gap-4">
                                     <div className="flex items-center gap-2">
-                                        <a href="{{ filters_url($category, ['view-products' => 'grid']) }}"
+                                        <a href="#"
                                             className="{{ session()->get('view-products') === 'grid' ? 'pointer-events-none text-blue-600' : '' }} inline-flex items-center justify-center w-10 h-10 rounded-md bg-card hover:text-blue-600">
                                             <svg className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                                                 viewBox="0 0 52 52">
@@ -75,7 +75,7 @@ function Catalog() {
                                                     clipRule="evenodd" />
                                             </svg>
                                         </a>
-                                        <a href="{{ filters_url($category, ['view-products' => 'list']) }}"
+                                        <a href="#"
                                             className="{{ session()->get('view-products') === 'list' ? 'pointer-events-none text-blue-600' : '' }} inline-flex items-center justify-center w-10 h-10 rounded-md bg-card hover:text-blue-600">
                                             <svg className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                                                 viewBox="0 0 52 52">

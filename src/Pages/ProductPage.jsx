@@ -120,8 +120,8 @@ function ProductPage() {
                                             <button type="button" id="plus" onClick={handlePlus}
                                                 className="w-12 h-full rounded-lg border border-solid border-black bg-gray/5 text-dark text-xs shadow-transparent outline-0 transition">+</button>
                                         </div>
-                                        <button type="submit" className="!px-6 xs:!px-8 btn btn-gray">Add to cart</button>
-                                        <a href="#" className="w-[68px] !px-0 btn btn-blue" title="В избранное">
+                                        <button type="submit" disabled className="!px-6 xs:!px-8 btn btn-gray">Add to cart</button>
+                                        <a href="#" disabled className="w-[68px] !px-0 btn btn-blue" title="В избранное">
                                             <svg className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                                                 viewBox="0 0 52 52">
                                                 <path

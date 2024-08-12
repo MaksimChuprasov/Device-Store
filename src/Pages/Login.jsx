@@ -17,7 +17,7 @@ function Profile() {
 
                 <ul className="space-y-3 my-2">
                     <li>
-                        <a href="{{ route('socialRedirect', ['socialName' => 'github']) }}"
+                        <a href="#"
                             className="relative flex items-center h-14 px-12 rounded-lg border border-black bg-white/20 hover:bg-white/20 active:bg-white/10 active:translate-y-0.5">
                             <svg className="shrink-0 absolute left-4 w-5 sm:w-6 h-5 sm:h-6 text-black" xmlns="http://www.w3.org/2000/svg"
                                 fill="currentColor" viewBox="0 0 20 20">
@@ -29,7 +29,7 @@ function Profile() {
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('socialRedirect', ['socialName' => 'google']) }}"
+                        <a href="#"
                             className="relative flex items-center h-14 px-12 rounded-lg border border-black bg-white/20 hover:bg-white/20 active:bg-white/10 active:translate-y-0.5">
                             <svg className="shrink-0 absolute left-4 w-5 sm:w-6 h-5 sm:h-6 text-black" fill="currentColor"
                                 enableBackground="new 0 0 32 32" version="1.1" viewBox="0 0 32 32"
@@ -46,9 +46,9 @@ function Profile() {
 
                 <x-slot:buttons>
                     <div className="mt-5 flex items-center justify-between">
-                        <div className="text-xxs md:text-xs"><a href="{{ route('forgotPassword') }}"
+                        <div className="text-xxs md:text-xs"><a href="#"
                                 className="text-black hover:text-darkblue font-bold">Forgot your password?</a></div>
-                        <div className="text-xxs md:text-xs"><a href="{{ route('register') }}"
+                        <div className="text-xxs md:text-xs"><a href="#"
                                 className="text-black hover:text-darkblue font-bold">Create account</a></div>
                     </div>
                 </x-slot:buttons>

@@ -39,7 +39,7 @@ function BrandsFilter() {
                 </div>
             ))}
             <div>
-                <button type="submit" className="w-full !h-16 mt-4 btn btn-blue">Apply</button>
+                <button type="submit" disabled className="w-full !h-16 mt-4 btn btn-blue">Apply</button>
             </div>
             <div>
                 <button type="reset" onClick={handleResetFilter}

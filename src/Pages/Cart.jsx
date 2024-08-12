@@ -8,7 +8,7 @@ function Cart() {
 
                     {/*  Breadcrumbs  */}
                     <ul className="breadcrumbs flex flex-wrap gap-y-1 gap-x-4">
-                        <li><a href="{{ route('home') }}" className="text-gray hover:text-darkblue text-xs">Home</a></li>
+                        <li><a href="#" className="text-gray hover:text-darkblue text-xs">Home</a></li>
                         <li><span className="text-gray text-xs">Shopping cart</span></li>
                     </ul>
 
