@@ -5,7 +5,6 @@ function ProductCard({ src, title, price, text, properties }) {
     const priceStr = price.toString();
 
     const formattedPrice = priceStr.slice(0, -2) + ',' + priceStr.slice(-2);
-    console.log(properties)
 
     return (
         /* Product card */

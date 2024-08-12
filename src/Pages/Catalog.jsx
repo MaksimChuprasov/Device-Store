@@ -57,13 +57,7 @@ function Catalog() {
                                 <input type="hidden" name="sort" value="{{ request('sort') }}" />
                                 <Price />
                                 <BrandsFilter />
-                                <div>
-                                    <button type="submit" className="w-full !h-16 mt-4 btn btn-blue">Apply</button>
-                                </div>
-                                <div>
-                                    <a type="reset"
-                                        className="w-full !h-16 mt-4 btn btn-outline">Reset filters</a>
-                                </div>
+                                
                             </form>
                         </aside>
 
